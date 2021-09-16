@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean class="org.example.EmployeeBeen" name="employee">
+    <bean class="org.example.EmployeeBeen" name="employee1">
 
         <property name="id">
             <value>1</value>
@@ -18,6 +19,17 @@
             <value>UAE</value>
         </property>
 
+    </bean>
+
+    <bean class="org.example.EmployeeBeen" name="employee2">
+
+        <property name="id" value="2"/>
+        <property name="name" value="Joe"/>
+        <property name="address" value="US"/>
+
+    </bean>
+
+    <bean class="org.example.EmployeeBeen" name="employee3" p:id="3" p:name="Ria" p:address="NZ">
     </bean>
 
 </beans>
