@@ -18,5 +18,8 @@ public class App
         System.out.println(employee1);
         System.out.println(employee2);
         System.out.println(employee3);
+
+        EmployeeCollectionBean employeeCollectionBean1 = (EmployeeCollectionBean) context.getBean("employeeCollectionBean1");
+        System.out.println(employeeCollectionBean1);
     }
 }

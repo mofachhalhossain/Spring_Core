@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:p="http://www.springframework.org/schema/p" xmlns:util="http://www.springframework.org/schema/util"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-       http://www.springframework.org/schema/beans/spring-beans.xsd">
+       http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
 
     <bean class="org.example.EmployeeBeen" name="employee1">
-
         <property name="id">
             <value>1</value>
         </property>
@@ -18,18 +17,47 @@
         <property name="address">
             <value>UAE</value>
         </property>
-
     </bean>
 
     <bean class="org.example.EmployeeBeen" name="employee2">
-
         <property name="id" value="2"/>
         <property name="name" value="Joe"/>
         <property name="address" value="US"/>
-
     </bean>
 
     <bean class="org.example.EmployeeBeen" name="employee3" p:id="3" p:name="Ria" p:address="NZ">
     </bean>
+
+    <bean class="org.example.EmployeeCollectionBean" name="employeeCollectionBean1">
+        <property name="initTasks">
+            <list>
+                <value>Application Idea</value>
+                <value>Diagrams</value>
+                <value>Flow Chart</value>
+                <value>Start</value>
+            </list>
+        </property>
+
+        <property name="date">
+            <set>
+                <value>12.3.20</value>
+                <value>22.5.20</value>
+                <value>25.5.20</value>
+                <value>2.6.20</value>
+            </set>
+        </property>
+
+        <property name="finishTask">
+            <map>
+                <entry key="finished" value="true"/>
+                <entry key="finished" value="true"/>
+                <entry key="finished" value="false"/>
+                <entry key="finished" value="true"/>
+            </map>
+        </property>
+    </bean>
+
+
+
 
 </beans>
