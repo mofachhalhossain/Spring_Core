@@ -20,6 +20,6 @@ public class App
         System.out.println(employee3);
 
         EmployeeCollectionBean employeeCollectionBean1 = (EmployeeCollectionBean) context.getBean("employeeCollectionBean1");
-        System.out.println(employeeCollectionBean1);
+        System.out.println(employeeCollectionBean1.getDate());
     }
 }
